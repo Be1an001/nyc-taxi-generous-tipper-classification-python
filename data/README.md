@@ -8,9 +8,8 @@ This project uses the official **2017 Yellow Taxi Trip Data** from NYC Open Data
 
 Useful links:
 
-- [NYC Open Data landing page](https://data.cityofnewyork.us/Transportation/2017-Yellow-Taxi-Trip-Data/biws-g3hs/about_data)
+- [NYC 2017 Yellow Taxi Trip Data Open Data landing page](https://data.cityofnewyork.us/Transportation/2017-Yellow-Taxi-Trip-Data/biws-g3hs/about_data)
 - [Socrata CSV/API endpoint used in the code](https://data.cityofnewyork.us/resource/biws-g3hs.csv)
-- [Data.gov catalog page](https://catalog.data.gov/dataset/2017-yellow-taxi-trip-data)
 
 ## Why I did not upload the dataset
 
