@@ -6,7 +6,7 @@ This repo does **not** include raw CSV files.
 
 This project uses the official **2017 Yellow Taxi Trip Data** from NYC Open Data.
 
-Useful links:
+Useful links (Copy the link address and paste it into a new tab):
 
 - [NYC 2017 Yellow Taxi Trip Data Open Data landing page](https://data.cityofnewyork.us/Transportation/2017-Yellow-Taxi-Trip-Data/biws-g3hs/about_data)
 - [Socrata CSV/API endpoint used in the code](https://data.cityofnewyork.us/resource/biws-g3hs.csv)
