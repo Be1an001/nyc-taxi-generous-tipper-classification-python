@@ -12,7 +12,7 @@ Original file is located at
 This notebook is my portfolio rewrite of the Automatidata project.
 
 I used official NYC Open Data and built a full classification workflow in Colab.
-To keep the notebook practical and reproducible, I downloaded a manageable public-data slice from the 2017 Yellow Taxi dataset instead of using the full table.
+To keep the notebook practical and easy to rerun, I downloaded a manageable public-data sample from the 2017 Yellow Taxi dataset instead of using the full table.
 
 The target is whether a credit-card trip ended with a tip rate of 20% or higher.
 """
@@ -55,7 +55,7 @@ For this portfolio version, I use a less problematic target:
 This still supports revenue analysis, but avoids directly profiling riders as "bad customers."
 """
 
-# Define the official dataset endpoint and a helper to pull a reproducible Colab-sized slice
+# Define the official dataset endpoint and a helper to pull a manageable Colab-sized sample
 DATASET_PAGE = "https://data.cityofnewyork.us/Transportation/2017-Yellow-Taxi-Trip-Data/biws-g3hs/about_data"
 API_ENDPOINT = "https://data.cityofnewyork.us/resource/biws-g3hs.csv"
 
@@ -96,7 +96,7 @@ def fetch_month_chunk(start_date: str, end_date: str, limit: int = 15000) -> pd.
         parse_dates=["tpep_pickup_datetime", "tpep_dropoff_datetime"]
     )
 
-# Pull data in monthly chunks so the notebook stays reproducible in Colab
+# Pull data in monthly chunks so the notebook stays manageable in Colab
 month_starts = pd.date_range("2017-01-01", "2017-12-01", freq="MS")
 rows_per_month = 15000
 
