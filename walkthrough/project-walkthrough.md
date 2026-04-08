@@ -9,7 +9,7 @@ I used official NYC Open Data and rebuilt the full workflow in Colab. The projec
 Useful files:
 
 - [Notebook version](../notebooks/01-automatidata-portfolio-project.ipynb)
-- [Python script version](../scripts/01-automatidata-portfolio-project.py)
+- [Exported Python script view](../scripts/01-automatidata-portfolio-project.py)
 - [Portfolio PDF report](../reports/automatidata-portfolio-report-cheng-liu.pdf)
 - [Data note](../data/README.md)
 - [Contribution note](../contribution-note.md)
@@ -33,11 +33,11 @@ This still keeps the project useful for tip-behavior analysis, but it is a more 
 
 I used the official **2017 Yellow Taxi Trip Data** from NYC Open Data.
 
-In this version, I did not rely on local course CSV files. The notebook and script pull data directly from the official API.
+In this version, I did not rely on local course CSV files. The notebook and exported script pull data directly from the official API.
 
 Main data setup:
 
-- raw public-data slice pulled: **180,000 rows**
+- public-data sample pulled: **180,000 rows**
 - filtered modeling sample: **116,748 credit-card trips**
 - original API fields pulled first: **13**
 - final modeling inputs before one-hot encoding: **21**
@@ -189,7 +189,7 @@ It shows that I can take a classroom scenario, rebuild it with official public d
 For my job search, I think this project is useful because it shows:
 
 - practical Python and Colab workflow
-- reproducible data access from an official source
+- public-data access from an official source
 - feature engineering and model comparison
 - honest model interpretation
 - clear portfolio communication

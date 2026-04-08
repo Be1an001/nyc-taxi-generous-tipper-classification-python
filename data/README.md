@@ -17,12 +17,12 @@ I did not upload a local CSV for this repo because:
 
 - the official dataset is public and already available online
 - the full 2017 table is very large
-- this project was designed to be reproducible directly from the official API
+- this project was designed to pull directly from the official API
 - the notebook and script already show the exact fields and pull method
 
 ## How the code reads the data
 
-The notebook and script pull monthly chunks from the official CSV endpoint and keep these fields first:
+The notebook and exported script pull monthly chunks from the official CSV endpoint and keep these fields first:
 
 - `vendorid`
 - `tpep_pickup_datetime`
@@ -42,8 +42,10 @@ The notebook and script pull monthly chunks from the official CSV endpoint and k
 
 This public version uses:
 
-- a reproducible public-data slice of **180,000 rows**
+- a public-data sample pull of **180,000 rows**
 - a filtered modeling sample of **116,748 credit-card trips**
+
+Reruns depend on internet/API access, and the code includes an optional app-token field if smoother retrieval is needed.
 
 ## Important limit
 

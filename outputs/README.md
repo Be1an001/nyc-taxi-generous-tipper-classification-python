@@ -1,6 +1,6 @@
 # Outputs
 
-This folder keeps the main visual outputs I used for the public portfolio version of the project.
+This folder keeps selected portfolio visuals I used for the public version of the project.
 
 ## Files
 
@@ -9,6 +9,8 @@ This folder keeps the main visual outputs I used for the public portfolio versio
 - [XGBoost permutation importance](figures/xgboost-permutation-importance.png)
 - [Portfolio PDF report](../reports/automatidata-portfolio-report-cheng-liu.pdf)
 - [Project walkthrough](../walkthrough/project-walkthrough.md)
+
+These are preserved supporting figures for the portfolio presentation. Local reruns may also create CSV summaries in the repo root, but those local files are gitignored and are not the main outputs kept here.
 
 ## 1. Updated executive summary
 

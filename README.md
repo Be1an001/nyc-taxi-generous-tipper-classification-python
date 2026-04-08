@@ -8,13 +8,15 @@ This is my updated public version of the Automatidata classroom project from the
 
 I rebuilt the workflow so it can run directly in Colab with official NYC Open Data instead of local course CSV files. The main task is to predict whether a credit-card yellow taxi trip ended with a tip rate of 20% or higher.
 
+The notebook is the main runnable version for this repo. The Python file is kept as an exported code view of the same workflow.
+
 I kept the project simple to read and easy to rerun. My goal for this repo is to show the business problem, the data workflow, the model comparison, and the main limits in a clean portfolio format.
 
 ## Project files
 
 - [Portfolio PDF report](reports/automatidata-portfolio-report-cheng-liu.pdf)
 - [Notebook version](notebooks/01-automatidata-portfolio-project.ipynb)
-- [Python script version](scripts/01-automatidata-portfolio-project.py)
+- [Exported Python script view](scripts/01-automatidata-portfolio-project.py)
 - [Project walkthrough](walkthrough/project-walkthrough.md)
 - [Data note](data/README.md)
 - [Scripts note](scripts/README.md)
@@ -42,7 +44,7 @@ Main dataset notes:
 
 - Source: official NYC Open Data
 - Pull method: monthly API chunks from the Socrata CSV endpoint
-- Raw public-data slice used in this project: **180,000 rows**
+- Public-data sample used in this project: **180,000 rows**
 - Final filtered modeling sample: **116,748 credit-card trips**
 - Raw API fields pulled first: **13**
 - Final modeling inputs before one-hot encoding: **21**
@@ -89,6 +91,8 @@ My main read is that the result is stable enough for a portfolio project, but it
 
 ## Key visuals
 
+These are selected portfolio figures preserved in `outputs/figures/`.
+
 ### One-page executive summary
 ![Automatidata executive summary](outputs/figures/automatidata-updated-executive-summary.png)
 
@@ -114,11 +118,12 @@ My main read is that the result is stable enough for a portfolio project, but it
 
 ## How to run
 
-1. Open the notebook in Colab or run the Python script locally.
+1. Open the notebook in Colab as the main runnable version.
 2. Install packages from `requirements.txt`.
-3. Run the notebook or script from top to bottom.
-4. The code will pull the data from official NYC Open Data.
-5. The model results and figures can then be reproduced.
+3. Run the notebook to pull the data from official NYC Open Data. The Python file is an exported companion view of the same workflow.
+4. Reruns depend on internet/API access, and the optional app token in the code may help if retrieval is slow or rate-limited.
+5. Local reruns may also create optional CSV summaries in the repo root: `validation_results.csv`, `test_results.csv`, and `permutation_importance.csv`. These are gitignored local artifacts.
+6. The repo also keeps selected portfolio figures in `outputs/figures/`.
 
 ## Why I made this version
 

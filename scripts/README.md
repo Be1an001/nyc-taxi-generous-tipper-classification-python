@@ -5,7 +5,7 @@ This folder keeps the code side of the project.
 ## Files
 
 - [Notebook version](../notebooks/01-automatidata-portfolio-project.ipynb)
-- [Python script version](01-automatidata-portfolio-project.py)
+- [Exported Python script view](01-automatidata-portfolio-project.py)
 
 ## What is the difference?
 
@@ -14,8 +14,8 @@ The notebook is the main runnable version for Colab.
 It is the best file if someone wants to follow the project step by step.
 
 ### Python script
-The Python file is the exported script version of the same workflow.  
-It is easier to scan quickly on GitHub and useful for people who prefer a plain script view.
+The Python file is an exported script view of the same workflow.  
+It is easier to scan quickly on GitHub and useful as a companion code view, but the notebook is still the primary runnable version.
 
 ## Main workflow in the code
 
@@ -27,6 +27,16 @@ It is easier to scan quickly on GitHub and useful for people who prefer a plain 
 - compare Logistic Regression, Random Forest, and XGBoost
 - evaluate the final model
 - plot the confusion matrix and permutation importance
+
+## Small note on local artifacts
+
+Local reruns may also write optional CSV summaries in the repo root:
+
+- `validation_results.csv`
+- `test_results.csv`
+- `permutation_importance.csv`
+
+These are local helper outputs and are gitignored in this repo.
 
 ## Related files
 
