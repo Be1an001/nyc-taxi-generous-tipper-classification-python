@@ -17,8 +17,8 @@ To keep the notebook practical and reproducible, I downloaded a manageable publi
 The target is whether a credit-card trip ended with a tip rate of 20% or higher.
 """
 
-# Install xgboost for the tree-based comparison model
-!pip -q install xgboost
+# Exported notebook companion; the notebook is still the primary runnable version.
+# Install xgboost from requirements.txt before running this script locally.
 
 # Import libraries and set display options
 import io
