@@ -1,28 +1,21 @@
 # Data Note
 
-This repo does **not** include raw CSV files.
+This repository does **not** include raw CSV data files.
 
-## Main source
+## Dataset and Scope
 
 This project uses the official **2017 Yellow Taxi Trip Data** from NYC Open Data.
 
-Useful links (Copy the link address and paste it into a new tab):
+Useful source links:
 
 - [NYC 2017 Yellow Taxi Trip Data Open Data landing page](https://data.cityofnewyork.us/Transportation/2017-Yellow-Taxi-Trip-Data/biws-g3hs/about_data)
 - [Socrata CSV/API endpoint used in the code](https://data.cityofnewyork.us/resource/biws-g3hs.csv)
 
-## Why I did not upload the dataset
+The notebook and exported script pull a manageable sample directly from the official CSV endpoint instead of relying on local course files.
 
-I did not upload a local CSV for this repo because:
+## Fields Pulled First
 
-- the official dataset is public and already available online
-- the full 2017 table is very large
-- this project was designed to pull directly from the official API
-- the notebook and script already show the exact fields and pull method
-
-## How the code reads the data
-
-The notebook and exported script pull monthly chunks from the official CSV endpoint and keep these fields first:
+The code first requests these fields:
 
 - `vendorid`
 - `tpep_pickup_datetime`
@@ -38,17 +31,27 @@ The notebook and exported script pull monthly chunks from the official CSV endpo
 - `tolls_amount`
 - `total_amount`
 
-## Working data used in this repo
+## Working Data Used in This Project
 
-This public version uses:
+The stored notebook outputs show:
 
-- a public-data sample pull of **180,000 rows**
-- a filtered modeling sample of **116,748 credit-card trips**
+- public-data sample pull: **180,000 rows**
+- filtered modeling sample: **116,748 credit-card trips**
+- raw API fields pulled first: **13**
+- final modeling inputs before one-hot encoding: **21**
+- positive class share: about **52.7 percent generous-tip trips**
 
-Reruns depend on internet/API access, and the code includes an optional app-token field if smoother retrieval is needed.
+The code pulls monthly chunks from 2017, with 15,000 rows requested per month.
 
-## Important limit
+## Why Credit-Card Trips Only
 
-The final model represents the filtered **credit-card subset**, not all taxi riders.
+The final model represents the filtered **credit-card trip subset**, not all taxi trips.
 
-This matters because cash tips are not recorded as reliably in the trip table, so I limited the modeling data to credit-card trips for a more consistent target.
+This is important because credit-card tips are recorded in the trip table more consistently than cash tips. Limiting the analysis to credit-card trips makes the target more reliable, but it also narrows the scope of the result.
+
+## Reproducibility Notes
+
+- Reruns require internet access and availability of the NYC Open Data API.
+- The code includes an optional Socrata app-token field if retrieval is slow or rate-limited.
+- The repository does not include the full 2017 taxi table.
+- The result should not be described as performance on all NYC taxi trips.
